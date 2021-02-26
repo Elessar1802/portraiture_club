@@ -58,4 +58,33 @@
     border-radius: 50%;
     transform: translateY(-50%);
   }
+
+  &__navigation {
+      position: absolute;
+      top: 6%;
+      right: 3%;
+  }
+
+  &__list {
+      display: flex;
+      list-style: none;
+  }
+
+  &__items {
+      color: white;
+      font-size: 2rem;
+      font-family: 'Lato';
+      letter-spacing: 3px;
+      font-weight: 400;
+      text-transform: uppercase;
+      &:not(:last-of-type) {
+        margin-right: 4rem;
+      }
+  }
+
+  &-btn {
+      text-decoration: none;
+      color: inherit;
+      font-weight: inherit;
+  }
 }

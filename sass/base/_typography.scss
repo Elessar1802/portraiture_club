@@ -31,6 +31,10 @@ body {
         animation-delay: 3s;
         animation-iteration-count: 3;
         */
+
+    &:first-letter {
+        margin-left: -6px;
+    }
     }
     
     &--sub {

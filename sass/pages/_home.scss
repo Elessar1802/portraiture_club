@@ -50,20 +50,30 @@
 
 .section-book {
     padding: 15rem 0;
-    background-image: linear-gradient(to right bottom, $color-header-1, $color-header-2);
+    background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary);
+    // background-image: url(../img/warm-mountain.jpg);
+    // background-attachment: fixed;
+    // background-position: 0 40%;
 
     @include respond(tab-port) {
         padding: 10rem 0;
     }
 }
 
+.section-gallery {
+    padding-top: 8rem;
+    margin-top: -8rem;
+    background-color: $color-grey-light-1;
+}
+
 .book {
-    background-image: linear-gradient(105deg, 
-                                    rgba($color-white, .9) 0%,
-                                    rgba($color-white, .9) 50%,
-                                    transparent 50%) ,
-                            url(../img/nat-10.jpg);
-    background-size: 100%;
+    background-image: linear-gradient(90deg, 
+                                    rgba($color-white, .8) 0%,
+                                    rgba($color-white, .8) 45%,
+                                    transparent 45%), 
+                                    url(../img/warm-mountain.jpg);
+    background-size: cover;
+    background-position: 20%;
     border-radius: 3px;
     box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
 
@@ -82,10 +92,11 @@ url(../img/nat-10.jpg);
         rgba($color-white, .9) 100%),
 url(../img/nat-10.jpg);
     }
+        display: flex;
 
     &__form {
-        width: 50%;
-        padding: 6rem;
+        width: 45%;
+        padding: 5rem 4rem;
 
         @include respond(tab-land) {
             width: 65%;
