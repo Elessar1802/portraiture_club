@@ -1,0 +1,61 @@
+.header {
+  height: 88vh;
+  background-image: linear-gradient(
+    to right bottom,
+    $color-header-1,
+    $color-header-2
+  );
+  clip-path: polygon(0% 0, 100% 0%, 100% 80%, 80% 100%, 0% 80%);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+    only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+    only screen and (min-width: 125em) {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.8),
+        rgba($color-primary-dark, 0.8)
+      ),
+      url(../img/hero.jpg);
+  }
+
+  @include respond(phone) {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+  }
+
+  &__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+  }
+
+  &__logo {
+    height: 3.5rem;
+  }
+
+  &__text-box {
+    position: absolute;
+    top: 45%;
+    left: 10%;
+    transform: translateY(-50%);
+    text-align: left;
+  }
+  &__camera {
+    width: 110%;
+  }
+
+  &__camera-box {
+    display: block;
+    width: 30%;
+    height: 28rem;
+    position: absolute;
+    right: 10%;
+    top: 40%;
+    box-shadow: 10rem 24rem 4rem rgba(0, 0, 0, 0.15);
+    border-radius: 50%;
+    transform: translateY(-50%);
+  }
+}

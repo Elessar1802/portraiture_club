@@ -1,0 +1,38 @@
+.composition--image {
+    width: 70rem;
+    height: auto;
+    margin-top: -12rem;
+    margin-left: -14rem;
+    margin-right: 5rem;
+}
+
+.quote {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    z-index: 20;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    &-text {
+        font-size: 4rem;
+        font-weight: 300;
+        font-style: italic;
+    }
+}
+
+.quote::before {
+    content: "\201C";
+    position: absolute;
+    top: -4.75rem;
+    left: -4.25rem;
+    line-height: 1;
+    font-size: 20rem;
+    color: $color-primary-dark;
+    font-family: 'Lato';
+    z-index: 1;
+}
+
+.quoter {
+    align-self: flex-end;
+    font-size: 1.6rem;
+}
