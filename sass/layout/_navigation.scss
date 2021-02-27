@@ -41,8 +41,8 @@
     top: 4.5rem;
     right: 5.5rem;
     background-image: radial-gradient(
-      $color-primary-light,
-      $color-primary-dark
+      $color-header-1 5%,
+      $color-header-2
     );
     z-index: 1000;
     transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);

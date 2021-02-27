@@ -5,52 +5,40 @@
     margin-top: -20vh;
 
     @include respond(tab-port) {
-        padding: 20rem 0;
+        overflow: hidden;
     }
 }
 
 .section-features {
     padding: 20rem 0;
-    background-image: linear-gradient(
-        to right bottom,
-        rgba($color-primary-light, 0.8),
-        rgba($color-primary-dark, 0.8)),
-    url(../img/flowers.jpg);
-    background-size: cover;
-    background-position: 0 50%;
-    background-repeat: no-repeat;
-    clip-path: polygon(0% 10%, 20% 0%, 100% 20%, 100% 90% ,60% 100%, 0% 90%);
+    background-image: linear-gradient(to right, rgba(0,0,0,0.22), rgba(0,0,0,0.22)), url("../img/pattern.png");
+background-attachment: fixed;
+    // background-image: linear-gradient(
+    //     to right bottom,$color-primary-light,$color-primary-dark);
+
+    // background-size: cover;
+    // background-position: 0 50%;
+    // background-repeat: no-repeat;
+    clip-path: polygon(0% 0%, 100% 10%, 100% 95% , 0% 100%);
     //transform: skewY(7deg);
     margin-top: -14rem;
 
     @include respond(tab-port) {
         padding: 10rem 0;
+        margin-top: -20rem;
+        clip-path: polygon(0% 0%, 100% 5%, 100% 95%, 0% 100%);
     }
 
-}
-
-.section-tours {
-    background-color: $color-grey-light-1;
-    padding: 25rem 0 15rem 0;
-    margin-top: -20rem;
-
-    @include respond(tab-port) {
-        padding: 20rem 0 10rem 0;
+    @include respond(tab-land) {
+        clip-path: polygon(0% 0%, 100% 5%, 100% 95%, 0% 100%);
     }
-}
 
-.section-stories {
-    position: relative;
-    padding: 15rem 0;
-
-    @include respond(tab-port) {
-        padding: 10rem 0;
-    }
 }
 
 .section-book {
     padding: 15rem 0;
-    background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary);
+     background-image: linear-gradient(
+        to right bottom,$color-header-1,$color-header-2);   // background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary);
     // background-image: url(../img/warm-mountain.jpg);
     // background-attachment: fixed;
     // background-position: 0 40%;
@@ -67,6 +55,8 @@
 }
 
 .book {
+    margin: 0 auto;
+    max-width: 80%;
     background-image: linear-gradient(90deg, 
                                     rgba($color-white, .8) 0%,
                                     rgba($color-white, .8) 45%,
@@ -78,32 +68,42 @@
     box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
 
     @include respond(tab-land) {
-        background-image: linear-gradient(105deg, 
+        background-image: linear-gradient(90deg, 
         rgba($color-white, .9) 0%,
-        rgba($color-white, .9) 65%,
-        transparent 65%) ,
-url(../img/nat-10.jpg);
+        rgba($color-white, .7) 55%,
+        transparent 55%) ,
+url(../img/warm-mountain.jpg);
         background-size: cover;
     }
 
     @include respond(tab-port) {
         background-image: linear-gradient(to right, 
         rgba($color-white, .9) 0%,
-        rgba($color-white, .9) 100%),
-url(../img/nat-10.jpg);
+        rgba($color-white, .7) 70%,
+        transparent 70%),
+url(../img/warm-mountain.jpg);
     }
-        display: flex;
-
+    @include respond(phone) {
+        background-image: linear-gradient(to right, 
+        rgba($color-white, .9) 0%,
+        rgba($color-white, .7) 80%,
+        transparent 80%),
+url(../img/warm-mountain.jpg);
+max-width: 90%;
+    }
     &__form {
         width: 45%;
         padding: 5rem 4rem;
 
         @include respond(tab-land) {
-            width: 65%;
+            width: 55%;
         }
 
         @include respond(tab-port) {
-            width: 100%;
+            width: 70%;
+        }
+        @include respond(phone) {
+            width: 80%;
         }
     }
 }

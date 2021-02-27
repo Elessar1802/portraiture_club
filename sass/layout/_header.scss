@@ -1,5 +1,8 @@
 .header {
   height: 88vh;
+  @include respond(phone) {
+      height: 92vh;
+  }
   background-image: linear-gradient(
     to right bottom,
     $color-header-1,
@@ -14,16 +17,15 @@
     only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
     only screen and (min-width: 125em) {
     background-image: linear-gradient(
-        to right bottom,
-        rgba($color-primary-light, 0.8),
-        rgba($color-primary-dark, 0.8)
-      ),
-      url(../img/hero.jpg);
+      to right bottom,
+      $color-header-1,
+      $color-header-2
+    );
   }
 
   @include respond(phone) {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 96%);
   }
 
   &__logo-box {
@@ -37,54 +39,53 @@
   }
 
   &__text-box {
-    position: absolute;
-    top: 45%;
-    left: 10%;
-    transform: translateY(-50%);
-    text-align: left;
+    margin-right: 4rem;
+    margin-left: -4rem;
+    @include respond(tab-land) {
+      margin-left: 0;
+      margin-right: 2rem;
+    }
+    
   }
+
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include respond(tab-land) {
+      width: 90%;
+    }
+    @include respond(tab-port) {
+      flex-direction: column;
+      align-items: center;
+      left: 45%;
+      margin-top: 5rem;
+    }
+    
+
+  }
+
   &__camera {
-    width: 110%;
-  }
+    width: 40rem;
+    flex: 0 1 35%;
 
-  &__camera-box {
-    display: block;
-    width: 30%;
-    height: 28rem;
-    position: absolute;
-    right: 10%;
-    top: 40%;
-    box-shadow: 10rem 24rem 4rem rgba(0, 0, 0, 0.15);
-    border-radius: 50%;
-    transform: translateY(-50%);
-  }
+    @include respond(tab-land) {
+      width: 35rem;
+      flex: 0 1 40%;
+    }
 
-  &__navigation {
-      position: absolute;
-      top: 6%;
-      right: 3%;
-  }
+    @include respond(tab-port) {
+      width: 35rem;
+      flex: 0 1 40%;
+    align-self: flex-end;
+    }
 
-  &__list {
-      display: flex;
-      list-style: none;
-  }
-
-  &__items {
-      color: white;
-      font-size: 2rem;
-      font-family: 'Lato';
-      letter-spacing: 3px;
-      font-weight: 400;
-      text-transform: uppercase;
-      &:not(:last-of-type) {
-        margin-right: 4rem;
-      }
-  }
-
-  &-btn {
-      text-decoration: none;
-      color: inherit;
-      font-weight: inherit;
+    @include respond(phone) {
+        width: 30rem;
+    }
   }
 }

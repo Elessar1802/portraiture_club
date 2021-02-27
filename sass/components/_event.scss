@@ -1,39 +1,70 @@
 .event {
-    &-1 {
-  background-image: linear-gradient(
-      180deg,
-      transparent 60%,
-      rgba(0, 0, 0, 0.1) 60%,
-      rgba(0, 0, 0, 0.35) 78%,
-      rgba(0, 0, 0, 0.5) 88%,
-      rgba(0, 0, 0, 0.6) 100%
-    ),
-    url("../img/capture-1.jpg");
+  &-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    max-width: $grid-width;
+    margin: 0 auto;
+    @include respond(tab-land) {
+      flex-direction: column;
+      align-items: center;
+      width: 80%;
     }
-
-    &-2 {
-  background-image: linear-gradient(
-      180deg,
-      transparent 50%,
-      rgba(0, 0, 0, 0.1) 60%,
-      rgba(0, 0, 0, 0.35) 78%,
-      rgba(0, 0, 0, 0.5) 88%,
-      rgba(0, 0, 0, 0.6) 100%
-    ),
-    url("../img/capture-2.jpg");
+    @include respond(tab-port) {
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
     }
+  }
+  &-1 {
+    background-image: linear-gradient(
+        180deg,
+        transparent 60%,
+        rgba(0, 0, 0, 0.1) 60%,
+        rgba(0, 0, 0, 0.35) 78%,
+        rgba(0, 0, 0, 0.5) 88%,
+        rgba(0, 0, 0, 0.6) 100%
+      ),
+      url("../img/capture-1.jpg");
+  }
 
-    &-heading {
-        text-align: left;
-        color: white;
-        font-size: 6rem;
-        text-transform: uppercase;
-        padding: 0;
-        margin-top: -12rem;
-        margin-bottom: -6rem;
+  &-2 {
+    background-image: linear-gradient(
+        180deg,
+        transparent 50%,
+        rgba(0, 0, 0, 0.1) 60%,
+        rgba(0, 0, 0, 0.35) 78%,
+        rgba(0, 0, 0, 0.5) 88%,
+        rgba(0, 0, 0, 0.6) 100%
+      ),
+      url("../img/capture-2.jpg");
+      @include respond(tab-land) {
+          margin-top: 5rem;
+      }
+  }
+
+  &-heading {
+    text-align: center;
+    color: $color-primary;
+    display: inline-block;
+    padding: 0.5rem 4rem;
+    border-radius: 4px;
+    font-weight: 300;
+    background-color: #fff;
+    font-size: 4rem;
+    text-transform: uppercase;
+    margin-top: -10rem;
+    margin-bottom: -2rem;
+
+    @include respond(tab-port) {
+      margin-top: -6rem;
     }
+  }
 
-  width: 100%;
+  width: 50rem;
+  @include respond(tab-land) {
+      width: 50rem;
+  }
+
   height: 27rem;
   background-size: cover;
   backface-visibility: hidden;
@@ -53,8 +84,8 @@
     flex-direction: column;
 
     & h4 {
-        font-weight: 400;
-        margin-bottom: 5px;
+      font-weight: 400;
+      margin-bottom: 5px;
     }
   }
 
@@ -65,7 +96,6 @@
 
   transition: all 0.2s;
 }
-
 
 .event-more {
   position: relative;
@@ -94,4 +124,3 @@
     width: 100%;
   }
 }
-

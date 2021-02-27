@@ -1,9 +1,18 @@
 .composition--image {
-    width: 70rem;
+    width: 60rem;
     height: auto;
-    margin-top: -12rem;
-    margin-left: -14rem;
-    margin-right: 5rem;
+    margin-top: -10rem;
+    @include respond(tab-land) {
+        width: 50rem;
+        height: auto;
+        margin-top: -5rem;
+    }
+    @include respond(tab-port) {
+        width: 50rem;
+        height: auto;
+        margin: -8rem;
+        margin-bottom: 1rem;
+    }
 }
 
 .quote {
@@ -35,4 +44,22 @@
 .quoter {
     align-self: flex-end;
     font-size: 1.6rem;
+}
+
+.comp__text {
+    flex: 0 0 40%;
+    @include respond(tab-port) {
+        width: 50%;
+        margin-top: 8rem;
+    }
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-evenly;
+    @include respond(tab-port) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 }
