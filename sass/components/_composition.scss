@@ -4,14 +4,15 @@
     margin-top: -10rem;
     @include respond(tab-land) {
         width: 50rem;
-        height: auto;
         margin-top: -5rem;
     }
     @include respond(tab-port) {
         width: 50rem;
-        height: auto;
-        margin: -8rem;
+        margin-top: -2rem;
         margin-bottom: 1rem;
+    }
+    @include respond(phone) {
+        width: 40rem;
     }
 }
 

@@ -8,10 +8,14 @@
   grid-template: repeat(12, 5vw) / repeat(8, 1fr);
 
   grid-gap: 1.5rem;
+  @include respond(phone) {
+      grid-gap: 4px;
+  }
   padding: 1.5rem;
   padding-bottom: 5rem;
 
   &__item {
+border-radius: 5px;
     &--1 {
       grid-row: 1 / span 3;
       grid-column: 1 / span 2;
@@ -87,5 +91,8 @@
     transition: transform 0.4s ease;
     border-radius: 5px;
     overflow: hidden;
+    @include respond (phone) {
+        transform: scale(1);
+    }
   }
 }

@@ -1,32 +1,23 @@
 .event {
   &-wrapper {
     display: flex;
-    justify-content: space-evenly;
-    max-width: $grid-width;
+    flex-wrap: wrap;
+    justify-content: center;
     margin: 0 auto;
-    @include respond(tab-land) {
-      flex-direction: column;
-      align-items: center;
-      width: 80%;
-    }
-    @include respond(tab-port) {
-        flex-direction: column;
-        align-items: center;
-        width: 80%;
-    }
+    width: 90%;
   }
+
   &-1 {
     background-image: linear-gradient(
         180deg,
         transparent 60%,
         rgba(0, 0, 0, 0.1) 60%,
-        rgba(0, 0, 0, 0.35) 78%,
-        rgba(0, 0, 0, 0.5) 88%,
-        rgba(0, 0, 0, 0.6) 100%
+        rgba(0, 0, 0, 0.45) 78%,
+        rgba(0, 0, 0, 0.6) 88%,
+        rgba(0, 0, 0, 0.7) 100%
       ),
       url("../img/capture-1.jpg");
   }
-
   &-2 {
     background-image: linear-gradient(
         180deg,
@@ -36,10 +27,29 @@
         rgba(0, 0, 0, 0.5) 88%,
         rgba(0, 0, 0, 0.6) 100%
       ),
+      url("../img/plane.jpg");
+  }
+  &-3 {
+    background-image: linear-gradient(
+        180deg,
+        transparent 50%,
+        rgba(0, 0, 0, 0.1) 60%,
+        rgba(0, 0, 0, 0.45) 78%,
+        rgba(0, 0, 0, 0.6) 88%,
+        rgba(0, 0, 0, 0.7) 100%
+      ),
+      url("../img/clouds.jpg");
+  }
+  &-4 {
+    background-image: linear-gradient(
+        180deg,
+        transparent 50%,
+        rgba(0, 0, 0, 0.1) 60%,
+        rgba(0, 0, 0, 0.35) 78%,
+        rgba(0, 0, 0, 0.5) 88%,
+        rgba(0, 0, 0, 0.6) 100%
+      ),
       url("../img/capture-2.jpg");
-      @include respond(tab-land) {
-          margin-top: 5rem;
-      }
   }
 
   &-heading {
@@ -60,31 +70,38 @@
     }
   }
 
-  width: 50rem;
+  flex: 0 1 20%;
   @include respond(tab-land) {
-      width: 50rem;
+    flex-basis: 35%;
+    margin-bottom: 4rem;
+    margin-right: 5rem;
+  }
+  @include respond(tab-port) {
+    flex-basis: 45%;
+    margin-bottom: 4rem;
+  }
+  &:not(:last-of-type) {
+    margin-right: 2rem;
   }
 
-  height: 27rem;
+  height: 28rem;
   background-size: cover;
   backface-visibility: hidden;
   display: flex;
-  border-radius: 8px;
+  border-radius: 18px;
   align-items: flex-end;
 
   &-text {
     color: $color-white;
     margin-left: 1.5rem;
-    margin-bottom: 1.5rem;
-    line-height: 1.2;
+    margin-bottom: 1.2rem;
+    line-height: 1.1;
     font-size: 3.2rem;
-    letter-spacing: 1px;
-    word-spacing: 5px;
     display: flex;
     flex-direction: column;
 
     & h4 {
-      font-weight: 400;
+      font-weight: bold;
       margin-bottom: 5px;
     }
   }
@@ -101,7 +118,7 @@
   position: relative;
   display: inline-block;
   font-size: 1.4rem;
-  font-weight: 300;
+  font-weight: 400;
   margin-top: 1rem;
 }
 
