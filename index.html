@@ -13,7 +13,11 @@
 
     <link rel="stylesheet" href="css/style.css" />
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
-
+  <script
+    src="https://code.jquery.com/jquery-3.5.1.slim.js"
+    integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM="
+    crossorigin="anonymous"
+  ></script>
     <title>Portraiture Club | *Click*</title>
   </head>
 
@@ -30,19 +34,25 @@
       <nav class="navigation__nav">
         <ul class="navigation__list">
           <li class="navigation__item">
-            <a href="#" class="navigation__link"><span>01</span>About Us</a>
+            <a href="#about" class="navigation__link"
+              ><span>01</span>About Us</a
+            >
           </li>
           <li class="navigation__item">
-            <a href="#" class="navigation__link"><span>02</span>Gallery</a>
+            <a href="#gallery" class="navigation__link"
+              ><span>02</span>Gallery</a
+            >
           </li>
           <li class="navigation__item">
-            <a href="#" class="navigation__link"><span>03</span>Events</a>
+            <a href="#event" class="navigation__link"><span>03</span>Events</a>
           </li>
           <li class="navigation__item">
-            <a href="#" class="navigation__link"><span>04</span>Contact Us</a>
+            <a href="#form" class="navigation__link"
+              ><span>04</span>Contact Us</a
+            >
           </li>
           <li class="navigation__item">
-            <a href="#" class="navigation__link"><span>05</span>Footer</a>
+            <a href="#footer" class="navigation__link"><span>05</span>Footer</a>
           </li>
         </ul>
       </nav>
@@ -69,7 +79,7 @@
     </header>
 
     <main>
-      <section class="section-about">
+      <section class="section-about" id="about">
         <div class="about-container">
           <div class="comp__img">
             <img
@@ -99,7 +109,7 @@
         </div>
       </section>
 
-      <section class="section-features">
+      <section class="section-features" id="event">
         <div class="u-center-text u-margin-bottom-big">
           <div class="event-heading">Events</div>
         </div>
@@ -122,7 +132,7 @@
           </div>
           <div class="event event-3">
             <div class="event-text">
-              <h4>Capture the uncaptured</h4>
+              <h4>Quick *Snaps*</h4>
               <div class="event-more">
                 <a href="#" class="event-btn"> Learn More &rarr;</a>
               </div>
@@ -130,16 +140,16 @@
           </div>
           <div class="event event-4">
             <div class="event-text">
-              <h4>Capture the uncaptured</h4>
+              <h4>Shutter Up</h4>
               <div class="event-more">
                 <a href="#" class="event-btn"> Learn More &rarr;</a>
               </div>
             </div>
           </div>
-          </div>
+        </div>
       </section>
 
-      <section class="section-gallery">
+      <section class="section-gallery" id="gallery">
         <div class="u-center-text u-margin-bottom-medium u-margin-top-medium">
           <div class="heading-secondary">Gallery</div>
         </div>
@@ -231,7 +241,7 @@
         </div>
       </section>
 
-      <section class="section-book">
+      <section class="section-book" id="form">
         <div class="book">
           <div class="book__form">
             <form action="#" class="form">
@@ -298,7 +308,7 @@
       </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" id="footer">
       <div class="footer__logo-box">
         <picture class="footer__logo">
           <img alt="Full logo" src="img/logo-green-1x.png" />
@@ -308,16 +318,16 @@
         <div class="footer__navigation">
           <ul class="footer__list">
             <li class="footer__item">
-              <a href="#" class="footer__link">About</a>
+              <a href="#about" class="footer__link">About</a>
             </li>
             <li class="footer__item">
-              <a href="#" class="footer__link">Contact us</a>
+              <a href="#form" class="footer__link">Contact us</a>
             </li>
             <li class="footer__item">
-              <a href="#" class="footer__link">Gallery</a>
+              <a href="#gallery" class="footer__link">Gallery</a>
             </li>
             <li class="footer__item">
-              <a href="#" class="footer__link">Events</a>
+              <a href="#event" class="footer__link">Events</a>
             </li>
             <li class="footer__item">
               <a href="#" class="footer__link">Terms</a>
@@ -332,4 +342,5 @@
       </div>
     </footer>
   </body>
+  <script src="js/script.js"></script>
 </html>

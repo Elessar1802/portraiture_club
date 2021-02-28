@@ -80,6 +80,11 @@
     flex-basis: 45%;
     margin-bottom: 4rem;
   }
+  
+  @include respond(phone) {
+      flex-basis: 100%;
+      margin-right: 0 !important;
+  }
   &:not(:last-of-type) {
     margin-right: 2rem;
   }

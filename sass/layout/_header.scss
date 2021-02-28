@@ -10,23 +10,14 @@
   background-position: top;
   position: relative;
 
-  // @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
-  //   only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
-  //   only screen and (min-width: 125em) {
-  //   background-image: linear-gradient(
-  //     to right bottom,
-  //     $color-header-1,
-  //     $color-header-2
-  //   );
-  // }
-
-  @include respond(phone) {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 96%);
-  }
   @include respond(tab-port) {
   clip-path: polygon(0% 0, 100% 0%, 100% 80%, 80% 90%, 0% 80%);
   margin-bottom: 4rem;
+  }
+  @include respond(phone) {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 96%);
+    margin-bottom: 0;
   }
   &__logo-box {
     position: absolute;
